@@ -1,0 +1,26 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "description": "hexlet project lvl 1",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boristhblade/frontend-project-lvl1.git"
+  },
+  "author": "Boris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boristhblade/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Boristhblade/frontend-project-lvl1#readme",
+  "dependencies": {
+    "makefile": "^0.0.2"
+  }
+}
