@@ -4,14 +4,14 @@ import {
 
 const name = greetAskName();
 console.log('What is the result of the expression?');
-const operators = ['+', '-', '*', '+'];
+const operators = ['+', '-', '*'];
 let answers = 0;
 for (let i = 0; i < 3; i += 1) {
   let question;
   let correctAnswer;
   const firstNumber = getRandomNumber(20);
   const secondNumber = getRandomNumber(20);
-  const operator = operators[getRandomNumber(3)];
+  const operator = operators[getRandomNumber(2)];
   switch (operator) {
     case '+':
       question = `${firstNumber} + ${secondNumber}`;
@@ -26,6 +26,7 @@ for (let i = 0; i < 3; i += 1) {
       correctAnswer = firstNumber * secondNumber;
       break;
     default:
+      console.error(`Smth wrong with operator variable. Its value is ${operator}`);
       break;
   }
   const answer = Number(askQuestion(question));

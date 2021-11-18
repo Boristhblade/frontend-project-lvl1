@@ -21,8 +21,23 @@ const checkAnswer = (answer, correctAnswer) => {
   return 0;
 };
 
-const getRandomNumber = (max) => (Math.floor(Math.random() * max));
+const getRandomNumber = (max) => (Math.floor(Math.random() * (max + 0.999)));
+
+const getGreatestCommonDivisor = (num1, num2) => {
+  const maxNum = num1 > num2 ? num1 : num2;
+  const minNum = num1 < num2 ? num1 : num2;
+  if (maxNum % minNum === 0) {
+    return minNum;
+  }
+  for (let i = Math.ceil(minNum / 2); i >= 1; i -= 1) {
+    if (maxNum % i === 0 && minNum % i === 0) {
+      return i;
+    }
+  }
+
+  return 0;
+};
 
 export {
-  greetAskName, askQuestion, getRandomNumber, checkAnswer,
+  greetAskName, askQuestion, getRandomNumber, checkAnswer, getGreatestCommonDivisor,
 };
