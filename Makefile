@@ -9,4 +9,8 @@ lint:
 brain-even:
 	node bin/brain-even
 brain-calc:
-	node brain-calc
+	node bin/brain-calc
+brain-progression:
+	node bin/brain-progression
+brain-prime:
+	node bin/brain-prime
