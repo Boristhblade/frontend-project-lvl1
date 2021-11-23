@@ -38,6 +38,17 @@ const getGreatestCommonDivisor = (num1, num2) => {
   return 0;
 };
 
+const generateArray = () => {
+  const array = [];
+  const arrayStart = getRandomNumber(50);
+  const arrayStep = getRandomNumber(10) + 1;
+  array.push(arrayStart);
+  while (array.length < getRandomNumber(5) + 5) {
+    array.push(array[array.length - 1] + arrayStep);
+  }
+  return array;
+};
+
 export {
-  greetAskName, askQuestion, getRandomNumber, checkAnswer, getGreatestCommonDivisor,
+  greetAskName, askQuestion, getRandomNumber, checkAnswer, getGreatestCommonDivisor, generateArray,
 };
