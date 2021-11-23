@@ -49,6 +49,18 @@ const generateArray = () => {
   return array;
 };
 
+const isPrime = (number) => {
+  if (number === 0 || number === 1) { return true; }
+  for (let i = 2; i < Math.ceil(number / 2); i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export {
-  greetAskName, askQuestion, getRandomNumber, checkAnswer, getGreatestCommonDivisor, generateArray,
+  greetAskName, askQuestion, getRandomNumber,
+  checkAnswer, getGreatestCommonDivisor,
+  generateArray, isPrime,
 };

@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import askname from '../src/cli.js';
+import greetAskName from '../src/cli.js';
 
-askname();
+greetAskName();
