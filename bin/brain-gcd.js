@@ -13,7 +13,7 @@ for (let i = 0; i < 3; i += 1) {
   const answer = Number(askQuestion(question));
   const correctAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
   if (checkAnswer(answer, correctAnswer) === 0) {
-    console.log(`Let's try again, ${name}`);
+    console.log(`Let's try again, ${name}!`);
     break;
   }
   answers += 1;

@@ -32,7 +32,7 @@ for (let i = 0; i < 3; i += 1) {
   }
   const answer = Number(askQuestion(question));
   if (checkAnswer(answer, correctAnswer) === 0) {
-    console.log(`Let's try again, ${name}`);
+    console.log(`Let's try again, ${name}!`);
     break;
   }
   answers += 1;

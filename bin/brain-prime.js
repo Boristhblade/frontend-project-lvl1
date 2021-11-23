@@ -11,7 +11,7 @@ for (let i = 0; i < 3; i += 1) {
   const answer = askQuestion(question);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   if (checkAnswer(answer, correctAnswer) === 0) {
-    console.log(`Let's try again, ${name}`);
+    console.log(`Let's try again, ${name}!`);
     break;
   }
   answers += 1;
