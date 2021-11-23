@@ -9,7 +9,7 @@ let answers = 0;
 for (let i = 0; i < 3; i += 1) {
   const question = getRandomNumber(20);
   const answer = askQuestion(question);
-  const correctAnswer = question % 2 === 0 && question !== 0 ? 'yes' : 'no';
+  const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
   if (checkAnswer(answer, correctAnswer) === 0) {
     console.log(`Let's try again, ${name}!`);
     break;
