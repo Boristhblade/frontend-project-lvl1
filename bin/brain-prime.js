@@ -17,5 +17,5 @@ for (let i = 0; i < 3; i += 1) {
   answers += 1;
 }
 if (answers === 3) {
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
