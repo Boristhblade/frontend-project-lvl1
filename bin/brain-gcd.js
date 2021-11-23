@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import {
   greetAskName, askQuestion, getRandomNumber, checkAnswer, getGreatestCommonDivisor,
 } from '../src/cli.js';
