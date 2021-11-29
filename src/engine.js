@@ -15,10 +15,10 @@ const checkAnswer = (answer, correctAnswer) => {
   return 0;
 };
 
-const runGame = (gameQuestion, questionGenerator, round = 3) => {
+const runGame = (gameQuestion, questionGenerator, roundCount = 3) => {
   const name = greetAskName();
   gameQuestion();
-  for (let i = 0; i < round; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     const [question, correctAnswer] = questionGenerator();
     const answer = askQuestion(question);
     if (checkAnswer(answer, correctAnswer) === 0) {
