@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import brainPrime from '../src/Games/brain-prime.js';
+import { generatePrimeQuestion, printPrimeQuestion } from '../src/Games/brain-prime.js';
+import runGame from '../src/engine.js';
 
-brainPrime();
+runGame(printPrimeQuestion, generatePrimeQuestion, 3);

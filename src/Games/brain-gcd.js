@@ -1,6 +1,4 @@
-import {
-  greetAskName, askQuestion, getRandomNumber, checkAnswer,
-} from '../cli.js';
+import { getRandomNumber } from '../cli.js';
 
 const getGreatestCommonDivisor = (num1, num2) => {
   if (num1 === 0) { return num2; }
@@ -20,25 +18,15 @@ const getGreatestCommonDivisor = (num1, num2) => {
 };
 
 const generateGcdQuestion = () => {
-  const firstNumber = getRandomNumber(50);
-  const secondNumber = getRandomNumber(50);
+  const firstNumber = getRandomNumber(1, 50);
+  const secondNumber = getRandomNumber(1, 50);
   const question = `${firstNumber} ${secondNumber}`;
   const correctAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
   return [question, correctAnswer];
 };
 
-const brainGcd = () => {
-  const rounds = 3;
-  const name = greetAskName();
+const printGcdQuestion = () => {
   console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 0; i < rounds; i += 1) {
-    const [question, correctAnswer] = generateGcdQuestion();
-    const answer = Number(askQuestion(question));
-    if (checkAnswer(answer, correctAnswer) === 0) {
-      return console.log(`Let's try again, ${name}!`);
-    }
-  }
-  return console.log(`Congratulations, ${name}!`);
 };
 
-export default brainGcd;
+export { printGcdQuestion, generateGcdQuestion };

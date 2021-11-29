@@ -1,6 +1,4 @@
-import {
-  greetAskName, askQuestion, getRandomNumber, checkAnswer,
-} from '../cli.js';
+import { getRandomNumber } from '../cli.js';
 
 const isPrime = (number) => {
   if (number === 0 || number === 1) { return true; }
@@ -13,23 +11,13 @@ const isPrime = (number) => {
 };
 
 const generatePrimeQuestion = () => {
-  const question = getRandomNumber(100);
+  const question = getRandomNumber(1, 100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-const brainPrime = () => {
-  const rounds = 3;
-  const name = greetAskName();
+const printPrimeQuestion = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  for (let i = 0; i < rounds; i += 1) {
-    const [question, correctAnswer] = generatePrimeQuestion();
-    const answer = askQuestion(question);
-    if (checkAnswer(answer, correctAnswer) === 0) {
-      return console.log(`Let's try again, ${name}!`);
-    }
-  }
-  return console.log(`Congratulations, ${name}!`);
 };
 
-export default brainPrime;
+export { generatePrimeQuestion, printPrimeQuestion };

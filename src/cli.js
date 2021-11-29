@@ -21,7 +21,7 @@ const checkAnswer = (answer, correctAnswer) => {
   return 0;
 };
 
-const getRandomNumber = (max) => (Math.floor(Math.random() * max));
+const getRandomNumber = (start, end) => (Math.floor(Math.random() * (end - start)) + start);
 
 export {
   greetAskName, askQuestion, getRandomNumber,

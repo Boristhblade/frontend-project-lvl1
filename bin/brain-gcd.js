@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import brainGcd from '../src/Games/brain-gcd.js';
+import { generateGcdQuestion, printGcdQuestion } from '../src/Games/brain-gcd.js';
+import runGame from '../src/engine.js';
 
-brainGcd();
+runGame(printGcdQuestion, generateGcdQuestion, 3);
