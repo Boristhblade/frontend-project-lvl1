@@ -7,23 +7,8 @@ const greetAskName = () => {
   return name;
 };
 
-const askQuestion = (question) => {
-  console.log(`Question: ${question}`);
-  return readlineSync.question('Your answer: ');
-};
-
-const checkAnswer = (answer, correctAnswer) => {
-  if (answer === correctAnswer) {
-    console.log('Correct!');
-    return 1;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return 0;
-};
-
 const getRandomNumber = (start, end) => (Math.floor(Math.random() * (end - start)) + start);
 
 export {
-  greetAskName, askQuestion, getRandomNumber,
-  checkAnswer,
+  greetAskName, getRandomNumber,
 };
