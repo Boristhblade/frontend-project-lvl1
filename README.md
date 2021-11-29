@@ -7,4 +7,4 @@ Asciinema:
   Brain even: https://asciinema.org/a/fX3tCEK2N1XqqIB0DLvTMuaK8
   Brain gcd: https://asciinema.org/a/6ccGccc2wJH2cewy4yUCbIlDd
   Brain prime: https://asciinema.org/a/QITDrsLEG4CjYI3he5efMrir0
-  Brain progression: 
+  Brain progression: https://asciinema.org/a/lHMoXAVkDusE0M0WA3sw98Hs0
