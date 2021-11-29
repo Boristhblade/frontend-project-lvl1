@@ -20,7 +20,7 @@ const generateGcdQuestion = () => {
   const secondNumber = getRandomNumber(1, 50);
   const question = `${firstNumber} ${secondNumber}`;
   const correctAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
-  return [question, correctAnswer];
+  return [question, String(correctAnswer)];
 };
 
 const printGcdQuestion = () => {
