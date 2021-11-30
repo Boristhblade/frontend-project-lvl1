@@ -1,4 +1,5 @@
 import { getRandomNumber } from '../cli.js';
+import runGame from '../engine.js';
 
 const getGreatestCommonDivisor = (num1, num2) => {
   const maxNum = num1 > num2 ? num1 : num2;
@@ -27,4 +28,6 @@ const printGcdQuestion = () => {
   console.log('Find the greatest common divisor of given numbers.');
 };
 
-export { printGcdQuestion, generateGcdQuestion };
+const launchBrainGcd = () => runGame(printGcdQuestion, generateGcdQuestion);
+
+export default launchBrainGcd;
