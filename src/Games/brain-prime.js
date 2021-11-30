@@ -3,7 +3,7 @@ import runGame from '../engine.js';
 
 const isPrime = (number) => {
   if (number === 0 || number === 1) { return true; }
-  for (let i = 2; i < Math.ceil(number / 2); i += 1) {
+  for (let i = 2; i <= Math.ceil(number / 2); i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -12,7 +12,7 @@ const isPrime = (number) => {
 };
 
 const generatePrimeQuestion = () => {
-  const question = getRandomNumber(1, 100);
+  const question = getRandomNumber(0, 100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
