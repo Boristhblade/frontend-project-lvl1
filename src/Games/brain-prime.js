@@ -1,4 +1,5 @@
 import { getRandomNumber } from '../cli.js';
+import runGame from '../engine.js';
 
 const isPrime = (number) => {
   if (number === 0 || number === 1) { return true; }
@@ -20,4 +21,6 @@ const printPrimeQuestion = () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 };
 
-export { generatePrimeQuestion, printPrimeQuestion };
+const launchBrainPrime = () => runGame(printPrimeQuestion, generatePrimeQuestion);
+
+export default launchBrainPrime;
