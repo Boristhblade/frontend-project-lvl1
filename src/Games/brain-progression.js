@@ -1,18 +1,21 @@
 import { getRandomNumber } from '../cli.js';
+import runGame from '../engine.js';
 
-const generateProgression = () => {
+const generateProgression = (startNumber, progressionStep, progressionLength) => {
   const progression = [];
-  const startNumber = getRandomNumber(0, 50);
-  const progressionStep = getRandomNumber(1, 10);
   progression.push(startNumber);
-  while (progression.length < getRandomNumber(0, 5) + 5) {
+  while (progression.length < progressionLength) {
     progression.push(progression[progression.length - 1] + progressionStep);
   }
   return progression;
 };
 
 const generateProgressionQuestion = () => {
-  const progression = generateProgression();
+  const progression = generateProgression(
+    getRandomNumber(0, 50),
+    getRandomNumber(1, 15),
+    getRandomNumber(5, 11),
+  );
   const correctAnswer = progression[getRandomNumber(0, progression.length - 1)];
   progression[progression.indexOf(correctAnswer)] = '..';
   const question = progression.join(' ');
@@ -23,4 +26,6 @@ const printProgressionQuestion = () => {
   console.log('What number is missing in the progression?');
 };
 
-export { generateProgressionQuestion, printProgressionQuestion };
+const launchBrainProgression = () => runGame(printProgressionQuestion, generateProgressionQuestion);
+
+export default launchBrainProgression;
