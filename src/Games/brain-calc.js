@@ -1,7 +1,7 @@
 import { getRandomNumber } from '../cli.js';
 import runGame from '../engine.js';
 
-const makeExtension = (firstNumber, secondNumber, operator) => {
+const makeExpression = (firstNumber, secondNumber, operator) => {
   switch (operator) {
     case '+':
       return [`${firstNumber} + ${secondNumber}`, String(firstNumber + secondNumber)];
@@ -19,7 +19,7 @@ const generateBrainCalcQuestion = () => {
   const secondNumber = getRandomNumber(0, 20);
   const operators = ['+', '-', '*'];
   const operator = operators[getRandomNumber(0, 3)];
-  return makeExtension(firstNumber, secondNumber, operator);
+  return makeExpression(firstNumber, secondNumber, operator);
 };
 
 const printCalcQuestion = () => {

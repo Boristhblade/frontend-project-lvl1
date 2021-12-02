@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 import { greetAskName } from './cli.js';
 
-const runGame = (getGameQuestion, questionGenerator) => {
+const runGame = (getGameQuestion, generateQuestion) => {
   const roundCount = 3;
   const name = greetAskName();
   getGameQuestion();
   for (let i = 0; i < roundCount; i += 1) {
-    const [question, correctAnswer] = questionGenerator();
+    const [question, correctAnswer] = generateQuestion();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer !== correctAnswer) {

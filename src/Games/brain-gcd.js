@@ -7,13 +7,7 @@ const getGreatestCommonDivisor = (num1, num2) => {
   if (maxNum % minNum === 0) {
     return minNum;
   }
-  for (let i = Math.ceil(minNum / 2); i >= 1; i -= 1) {
-    if (maxNum % i === 0 && minNum % i === 0) {
-      return i;
-    }
-  }
-
-  return 0;
+  return getGreatestCommonDivisor(minNum, maxNum % minNum);
 };
 
 const generateGcdQuestion = () => {
