@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../cli.js';
+import getRandomNumber from '../util.js';
 import runGame from '../engine.js';
 
 const generateProgression = (startNumber, progressionStep, progressionLength) => {
@@ -22,10 +22,8 @@ const generateProgressionQuestion = () => {
   return [question, String(correctAnswer)];
 };
 
-const printProgressionQuestion = () => {
-  console.log('What number is missing in the progression?');
-};
+const progressionQuestion = 'What number is missing in the progression?';
 
-const launchBrainProgression = () => runGame(printProgressionQuestion, generateProgressionQuestion);
+const launchBrainProgression = () => runGame(progressionQuestion, generateProgressionQuestion);
 
 export default launchBrainProgression;

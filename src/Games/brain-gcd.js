@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../cli.js';
+import getRandomNumber from '../util.js';
 import runGame from '../engine.js';
 
 const getGreatestCommonDivisor = (num1, num2) => {
@@ -18,10 +18,8 @@ const generateGcdQuestion = () => {
   return [question, String(correctAnswer)];
 };
 
-const printGcdQuestion = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-};
+const gcdQuestion = 'Find the greatest common divisor of given numbers.';
 
-const launchBrainGcd = () => runGame(printGcdQuestion, generateGcdQuestion);
+const launchBrainGcd = () => runGame(gcdQuestion, generateGcdQuestion);
 
 export default launchBrainGcd;

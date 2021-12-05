@@ -7,8 +7,4 @@ const greetAskName = () => {
   return name;
 };
 
-const getRandomNumber = (start, end) => (Math.floor(Math.random() * (end - start)) + start);
-
-export {
-  greetAskName, getRandomNumber,
-};
+export default greetAskName;

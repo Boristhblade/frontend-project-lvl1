@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
-import { greetAskName } from './cli.js';
+import greetAskName from './cli.js';
 
-const runGame = (getGameQuestion, generateQuestion) => {
+const runGame = (gameQuestion, generateQuestion) => {
   const roundCount = 3;
   const name = greetAskName();
-  getGameQuestion();
+  console.log(gameQuestion);
   for (let i = 0; i < roundCount; i += 1) {
     const [question, correctAnswer] = generateQuestion();
     console.log(`Question: ${question}`);

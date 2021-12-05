@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../cli.js';
+import getRandomNumber from '../util.js';
 import runGame from '../engine.js';
 
 const makeExpression = (firstNumber, secondNumber, operator) => {
@@ -22,10 +22,8 @@ const generateBrainCalcQuestion = () => {
   return makeExpression(firstNumber, secondNumber, operator);
 };
 
-const printCalcQuestion = () => {
-  console.log('What is the result of the expression?');
-};
+const calcQuestion = 'What is the result of the expression?';
 
-const launchBrainCalc = () => runGame(printCalcQuestion, generateBrainCalcQuestion);
+const launchBrainCalc = () => runGame(calcQuestion, generateBrainCalcQuestion);
 
 export default launchBrainCalc;
