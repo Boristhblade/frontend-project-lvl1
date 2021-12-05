@@ -3,6 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/e532ab870d2f456e77c2/maintainability)](https://codeclimate.com/github/Boristhblade/frontend-project-lvl1/maintainability)
 [![Actions Status](https://github.com/Boristhblade/frontend-project-lvl1/workflows/linter-test/badge.svg)](https://github.com/Boristhblade/frontend-project-lvl1/actions)
 
+Bundle of console games, use make <game_name> to launch.
+
 Asciinema:
 
   [Brain calc](https://asciinema.org/a/7MMeTieNeE66ESVANpWId2bRM)
